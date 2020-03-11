@@ -6,8 +6,9 @@ from scripts.lib.zulip_tools import deport
 from .config import DEVELOPMENT, PRODUCTION, get_secret
 
 if TYPE_CHECKING:
-    from django_auth_ldap.config import LDAPSearch
     from typing_extensions import TypedDict
+
+    from zproject.django_auth_ldap_exports import *
 
 if PRODUCTION:
     from .prod_settings import EXTERNAL_HOST, ZULIP_ADMINISTRATOR
